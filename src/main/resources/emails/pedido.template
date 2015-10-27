@@ -1,8 +1,12 @@
-<html>
-    <body>
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+	</head>
+	<body>
         <table>
             <tr>
-                <td style="width: 100px">NÃºmero:</td>
+                <td style="width: 100px">Número:</td>
                 <td>$pedido.id</td>
             </tr>
             <tr>
@@ -11,7 +15,7 @@
             </tr>
             <tr>
                 <td>Valor total:</td>
-                <td>$numberTool.format("Â¤ #0.00", $pedido.valorTotal, $locale)</td>
+                <td> $numberTool.format('¤ #,##0.00', $pedido.valorTotal, $locale)</td>
             </tr>
         </table>
         
@@ -19,7 +23,7 @@
         <table border="1" cellspacing="0" cellpadding="3">
             <tr>
                 <th>Produto</th>
-                <th>Valor unitÃ¡rio</th>
+                <th>Valor unitário</th>
                 <th>Quantidade</th>
                 <th>Valor total</th>
             </tr>
@@ -27,9 +31,9 @@
             	#if ($item.produto.id)
 	            <tr>
 	                <td>$item.produto.nome</td>
-	                <td>$numberTool.format("Â¤ #0.00", $item.produto.valorUnitario, $locale)</td>
+	                <td> $numberTool.format('¤ #,##0.00', $item.produto.valorUnitario, $locale)</td>
 	                <td>$item.quantidade</td>
-	                <td>$numberTool.format("Â¤ #0.00", $item.valorTotal, $locale)</td>
+	                <td> $numberTool.format('¤ #,##0.00', $item.valorTotal, $locale)</td>
 	            </tr>
 	            #end
             #end
